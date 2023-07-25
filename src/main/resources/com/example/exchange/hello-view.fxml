@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="1080.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exchange.HelloController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="1080.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="52.0" layoutY="-36.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane prefHeight="100.0" prefWidth="1080.0" style="-fx-background-color: #d1d4da;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/moneyIcon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="40.0" top="15.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER_RIGHT" prefHeight="21.0" prefWidth="68.0" text="Moneda" textFill="#303c8d" textOverrun="CLIP" wrapText="true">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@images/temperature.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets bottom="15.0" left="50.0" top="15.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Label text="Temperatura" textFill="#303c8d" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="80.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="15.0" left="50.0" top="15.0" />
+                           </GridPane.margin>
+                           <image>
+                              <Image url="@images/lenght.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Longitud" textFill="#303c8d" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="80.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="51.0" fitWidth="47.0" onMouseClicked="#onExitButtonClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="15.0" left="50.0" top="15.0" />
+                           </GridPane.margin>
+                           <image>
+                              <Image url="@images/close.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="437.0" layoutY="60.0" prefHeight="400.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <HBox layoutX="15.0" layoutY="33.0" prefHeight="82.0" prefWidth="1050.0" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <VBox prefHeight="82.0" prefWidth="150.0">
+                     <children>
+                        <Label text="Importe">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField id="moneyInput" prefWidth="159.0" stylesheets="@css/styles.css" viewOrder="1.0" />
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <VBox prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="De:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField prefWidth="109.0" style="-fx-border-color: #ccc; -fx-border-radius: 5; -fx-border-width: 2;" viewOrder="2.0" />
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="100.0" visible="false" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets bottom="16.0" left="25.0" right="25.0" top="16.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="@images/exchange.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <Separator prefWidth="100.0" visible="false" />
+                  <VBox prefHeight="200.0" prefWidth="150.0">
+                     <children>
+                        <Label text="A">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField style="-fx-border-color: #ccc; -fx-border-radius: 5; -fx-border-width: 2;" viewOrder="3.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label layoutX="282.0" layoutY="219.0" text="Label" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="447.0" layoutY="211.0" prefHeight="400.0" prefWidth="1080.0" style="-fx-background-color: #ccc;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+      <AnchorPane layoutX="447.0" layoutY="211.0" prefHeight="400.0" prefWidth="1080.0" style="-fx-background-color: #eee;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+   </children>
+</AnchorPane>
